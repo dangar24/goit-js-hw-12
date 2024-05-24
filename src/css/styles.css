@@ -12,6 +12,11 @@
   box-sizing: border-box;
 }
 
+.d-none {
+  opacity: 0;
+  display: none;
+}
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -126,6 +131,25 @@ align-items: center;
   display: block;
   width: 100%;
 }
+
+.load-more-btn {
+color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #4E75FF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px auto;
+}
+
+
 /* ---LOADER--- */
 .loader-box {
   margin-top: 20px;
