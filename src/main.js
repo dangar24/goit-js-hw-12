@@ -44,7 +44,6 @@ const sendForm = (event) => {
             loader.classList.remove('loader')
             allPages = Math.ceil(imgs.data.total / 15);
             if (imgs.data.hits.length === 0) {
-                console.log("Sorry, there are no images matching your search query. Please try again!");
                 iziToast.error({
                     message: 'Sorry, there are no images matching your search query. Please try again!',
                     position: 'topRight',
@@ -59,7 +58,11 @@ const sendForm = (event) => {
             };
         })
         .catch(error => {
-            console.log(error);
+            iziToast.error({
+                    message: 'Sorry, there are no images matching your search query. Please try again!',
+                    position: 'topRight',
+                    maxWidth: '300px',
+                });
         });
 showMoreValue = valueImp;   
 valueImp = "";
@@ -107,7 +110,11 @@ const showMore = () => {
             return;
         };
     }).catch(error => {
-        console.log(error);
+        iziToast.error({
+                    message: 'Sorry, there are no images matching your search query. Please try again!',
+                    position: 'topRight',
+                    maxWidth: '300px',
+                });
     });
         
         
